@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STB Electrical Services | Licensed Electricians Victoria</title>
+  <meta name="description" content="STB Electrical Services - Reliable licensed electricians serving Victoria, Australia. Residential, commercial & emergency electrical work." />
+  <meta name="keywords" content="STB Electrical, electrician, Victoria, electrical services, residential, commercial" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preload" href="assets/css/styles.css" as="style" />
+  <script defer src="assets/js/script.js"></script>
+  <!-- Favicons & App Icons -->
+  <!-- Fallback legacy favicon (.ico) for older browsers -->
+  <link rel="shortcut icon" href="assets/images/favicon-32.png" type="image/png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#111111" />
+  <meta name="msapplication-TileColor" content="#111111" />
+  <meta name="theme-color" content="#111111" />
+  <meta property="og:title" content="STB Electrical Services" />
+  <meta property="og:description" content="Professional & friendly electricians across Victoria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.example.com" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <script type="application/ld+json" id="structured-data">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "STB Electrical Services",
+    "image": "assets/images/og-image.jpg",
+    "@id": "",
+    "url": "https://www.example.com",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "",
+      "addressRegion": "VIC",
+      "postalCode": "",
+      "addressCountry": "AU"
+    },
+    "priceRange": "",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "",
+      "longitude": ""
+    },
+    "openingHoursSpecification": [],
+    "sameAs": ["https://www.facebook.com/STBelectricalservices/"]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <img src="assets/images/logo.jpg" alt="STB Electrical Services logo" class="logo" />
+      <h1>STB Electrical Services</h1>
+      <p class="tagline">Reliable. Safe. Professional.</p>
+    </div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <ul id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero" aria-label="Hero">
+      <div class="hero-content">
+        <h2 id="heroHeading">Professional Electrical Services Across Victoria</h2>
+        <p id="heroSubheading">Reliable installations, safe upgrades & responsive support for homes and businesses.</p>
+        <a href="#contact" class="cta-btn">Request a Quote</a>
+      </div>
+    </section>
+
+    <section id="about" class="panel" aria-labelledby="aboutHeading">
+      <h2 id="aboutHeading">About Us</h2>
+      <div id="aboutContent" class="content-block"></div>
+    </section>
+
+    <section id="services" class="panel" aria-labelledby="servicesHeading">
+      <h2 id="servicesHeading">Services</h2>
+      <ul id="servicesList" class="services-list"></ul>
+    </section>
+
+    <section id="gallery" class="panel" aria-labelledby="galleryHeading">
+      <h2 id="galleryHeading">Gallery</h2>
+      <div class="gallery-filters" id="galleryFilters"></div>
+      <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+    </section>
+    <!-- Lightbox modal for gallery images -->
+    <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog" aria-label="Expanded image view">
+      <button type="button" class="lightbox-close" aria-label="Close image">×</button>
+      <div class="lightbox-body">
+        <img id="lightboxImg" alt="Expanded work sample" />
+        <p id="lightboxCaption" class="lightbox-caption"></p>
+      </div>
+    </div>
+
+    <section id="contact" class="panel" aria-labelledby="contactHeading">
+      <h2 id="contactHeading">Contact</h2>
+      <div id="contactContent" class="contact-details"></div>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9\\s+()-]{6,}" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <!-- Honeypot field (hidden from users) -->
+        <div style="position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden;">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="honeypot" tabindex="-1" autocomplete="off" />
+        </div>
+        <button type="submit" class="cta-btn">Send Enquiry</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> STB Electrical Services. All rights reserved.</p>
+    <p class="license-note">Licensed & insured electricians serving Victoria, Australia.</p>
+    <div class="social-links" aria-label="Social media">
+      <a href="https://www.facebook.com/STBelectricalservices/" class="social-link facebook" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
+        <svg class="social-icon" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect width="24" height="24" rx="5" fill="#fff" />
+          <!-- Official Facebook "f" glyph path with properly aligned horizontal bar -->
+          <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.498v-9.294H10.84v-3.63h1.983V8.414c0-2.04.986-3.044 3.137-3.044.943 0 1.44.07 1.68.102v2.912h-1.848c-1.155 0-1.563.436-1.563 1.387v1.303h3.351l-.463 3.63h-2.888V24h5.467C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0Z" fill="#1877F2" />
+        </svg>
+        <span class="sr-only">Facebook</span>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

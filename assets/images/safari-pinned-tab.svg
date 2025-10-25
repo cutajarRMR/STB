@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>STB Electrical</title>
+  <desc>Safari pinned tab icon for STB Electrical</desc>
+  <g fill="#000000" fill-rule="evenodd">
+    <!-- Simplified monogram: S T B stacked -->
+    <path d="M96 96h320v64H96zM96 352h320v64H96z"/> <!-- top and bottom bars -->
+    <path d="M160 192h64v128h-64zM224 224h64v32h-64zM224 288h64v32h-64zM288 192h64v128h-64z"/>
+  </g>
+</svg>

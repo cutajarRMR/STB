@@ -1,0 +1,76 @@
+{
+  "business": {
+    "name": "STB Electrical Services",
+    "telephone": "04XX XXX XXX",
+    "url": "https://www.example.com", 
+    "address": {
+      "streetAddress": "123 Sample Street",
+      "locality": "Melbourne",
+      "postalCode": "3000"
+    },
+    "geo": { "lat": "-37.8136", "lng": "144.9631" },
+    "openingHours": [
+      { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:30", "closes": "17:30" },
+      { "days": ["Saturday"], "opens": "08:00", "closes": "13:00" }
+    ]
+  },
+  "about": {
+    "paragraphs": [
+      "STB Electrical Services is a locally owned and operated business providing reliable, safe and professional electrical solutions across Victoria.",
+      "We pride ourselves on transparent pricing, quality workmanship and friendly customer service from the first call to project completion.",
+      "No job is too small—from a simple power point replacement to complex commercial fit‑outs and emergency fault finding."
+    ],
+    "points": [
+      "Domestic, commercial & light industrial",
+      "Emergency call-outs",
+      "Energy efficiency & LED upgrades",
+      "Switchboard upgrades & safety inspections",
+      "Test & tag services"
+    ],
+    "licenses": ["REC ######", "A Grade Licensed Electrician", "Fully Insured"]
+  },
+  "services": [
+    { "title": "General Electrical", "description": "New outlets, lighting installs, rewiring & repairs." },
+    { "title": "Switchboard Upgrades", "description": "Modernisation, safety switch (RCD) installation & compliance." },
+    { "title": "Lighting & LED", "description": "Design, supply and installation of efficient lighting solutions." },
+    { "title": "Emergency Fault Finding", "description": "Rapid response troubleshooting to restore power safely." },
+    { "title": "Smoke Alarms", "description": "Interconnected, hardwired and compliance testing." },
+    { "title": "Ceiling & Exhaust Fans", "description": "Supply and installation for home ventilation and comfort." }
+  ],
+  "gallery": {
+    "items": [
+      {
+        "src": "assets/images/commercial.jpg",
+        "caption": "Commercial fit-out: new circuits, compliant cabling & efficient lighting.",
+        "category": "Commercial",
+        "alt": "Commercial interior with new electrical fit-out and installed lighting"
+      },
+      {
+        "src": "assets/images/led_outside.jpg",
+        "caption": "Weatherproof high-efficiency LED lighting for exterior safety & visibility.",
+        "category": "Outdoor",
+        "alt": "Installed outdoor LED lights illuminating exterior area"
+      },
+      {
+        "src": "assets/images/lighting_1.jpg",
+        "caption": "Interior lighting upgrade with modern efficient fixtures.",
+        "category": "Interior",
+        "alt": "Modern lights inside residential interior"
+      },
+      {
+        "src": "assets/images/switchboard.jpg",
+        "caption": "Switchboard upgrade with labelled circuits & RCD protection.",
+        "category": "Switchboard",
+        "alt": "Upgraded electrical switchboard with labelled circuits"
+      }
+    ]
+  },
+
+  "contact": {
+    "phone": "04XX XXX XXX",
+    "email": "info@example.com",
+    "address": { "full": "123 Sample Street, Melbourne VIC 3000" },
+    "emergencyHours": "24/7 emergency call-out available",
+    "serviceAreas": ["Melbourne Metro", "Mornington Peninsula", "Geelong", "Ballarat"]
+  }
+}
