@@ -1,7 +1,7 @@
 {
   "business": {
     "name": "STB Electrical Services",
-    "telephone": "04XX XXX XXX",
+    "telephone": "0434 399 519",
     "url": "https://www.example.com", 
     "address": {
       "streetAddress": "123 Sample Street",
@@ -67,10 +67,9 @@
   },
 
   "contact": {
-    "phone": "04XX XXX XXX",
+    "phone": "0434 399 519",
     "email": "info@example.com",
-    "address": { "full": "123 Sample Street, Melbourne VIC 3000" },
     "emergencyHours": "24/7 emergency call-out available",
-    "serviceAreas": ["Melbourne Metro", "Mornington Peninsula", "Geelong", "Ballarat"]
+    "serviceAreas": ["Melbourne Metro", "Wallan", "Craigieburn", "Kalkallo", "Sunbury", "Broadmeadows", "Whittlesea", "Heathcote", "Bendigo"]
   }
 }
