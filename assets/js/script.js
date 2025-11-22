@@ -145,38 +145,45 @@
   }
   function escapeAttr(str) { return escapeHtml(str).replace(/"/g, '&quot;'); }
 
-  // Simple mock submit (no backend) - adapt later
+  // Netlify Forms submission handler
   form?.addEventListener('submit', async e => {
     e.preventDefault();
     formStatusEl.textContent = '';
     const formData = new FormData(form);
-    const payload = {
-      name: String(formData.get('name')||'').trim(),
-      email: String(formData.get('email')||'').trim(),
-      phone: String(formData.get('phone')||'').trim(),
-      message: String(formData.get('message')||'').trim(),
-      honeypot: String(formData.get('honeypot')||'').trim()
-    };
-    if(!payload.name || !payload.email || !payload.message) {
+    
+    // Basic client-side validation
+    const name = String(formData.get('name')||'').trim();
+    const email = String(formData.get('email')||'').trim();
+    const message = String(formData.get('message')||'').trim();
+    
+    if(!name || !email || !message) {
       formStatusEl.textContent = 'Please fill required fields.';
       formStatusEl.style.color = '#d40000';
       return;
     }
+    
     formStatusEl.textContent = 'Sending…';
     formStatusEl.style.color = '#111';
+    
     try {
-      const res = await fetch('/api/quote', {
+      // Encode form data for Netlify Forms submission
+      const formBody = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        formBody.append(key, value);
+      }
+      
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody.toString()
       });
-      const data = await res.json();
-      if(res.ok && data.ok) {
+      
+      if(res.ok) {
         formStatusEl.textContent = 'Thank you — your request has been sent.';
         formStatusEl.style.color = '#0a7128';
         form.reset();
       } else {
-        throw new Error(data.error || 'Failed to send');
+        throw new Error('Form submission failed');
       }
     } catch(err) {
       console.error(err);

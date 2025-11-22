@@ -106,7 +106,13 @@
     <section id="contact" class="panel" aria-labelledby="contactHeading">
       <h2 id="contactHeading">Contact</h2>
       <div id="contactContent" class="contact-details"></div>
-      <form id="contactForm" class="contact-form" novalidate>
+      <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact" />
+        <!-- Honeypot field (hidden from users) -->
+        <div style="position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden;">
+          <label for="bot-field">Don't fill this out if you're human</label>
+          <input type="text" id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" />
+        </div>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
@@ -122,11 +128,6 @@
         <div class="form-group">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <!-- Honeypot field (hidden from users) -->
-        <div style="position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden;">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="honeypot" tabindex="-1" autocomplete="off" />
         </div>
         <button type="submit" class="cta-btn">Send Enquiry</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
