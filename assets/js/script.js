@@ -21,6 +21,16 @@
     navMenu.classList.toggle('open');
   });
 
+  // Close mobile menu when nav link is clicked
+  navMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        navToggleBtn?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
   async function loadData() {
     try {
       const res = await fetch(DATA_URL, { cache: 'no-store' });
