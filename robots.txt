@@ -1,0 +1,6 @@
+# robots.txt for STB Electrical Services
+
+User-agent: *
+Allow: /
+
+Sitemap: https://stbelectrical.netlify.app/sitemap.xml

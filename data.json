@@ -2,16 +2,16 @@
   "business": {
     "name": "STB Electrical Services",
     "telephone": "0434 399 519",
-    "url": "https://www.example.com", 
+    "url": "https://stbelectrical.netlify.app", 
     "address": {
-      "streetAddress": "123 Sample Street",
-      "locality": "Melbourne",
-      "postalCode": "3000"
+      "streetAddress": "Wallan",
+      "locality": "Wallan",
+      "postalCode": "3756"
     },
-    "geo": { "lat": "-37.8136", "lng": "144.9631" },
+    "geo": { "lat": "-37.4167", "lng": "144.9833" },
     "openingHours": [
       { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:30", "closes": "17:30" },
-      { "days": ["Saturday"], "opens": "08:00", "closes": "13:00" }
+      { "days": ["Saturday","Sunday"], "opens": "08:00", "closes": "17:00" }
     ]
   },
   "about": {
@@ -27,7 +27,7 @@
       "Switchboard upgrades & safety inspections",
       "Test & tag services"
     ],
-    "licenses": ["REC ######", "A Grade Licensed Electrician", "Fully Insured"]
+    "licenses": ["REC 31278", "A Grade Licensed Electrician", "Fully Insured"]
   },
   "services": [
     { "title": "General Electrical", "description": "New outlets, lighting installs, rewiring & repairs." },
@@ -43,7 +43,7 @@
         "src": "assets/images/commercial.jpg",
         "caption": "Commercial fit-out: new circuits, compliant cabling & efficient lighting.",
         "category": "Commercial",
-        "alt": "Commercial interior with new electrical fit-out and installed lighting"
+        "alt": "Pilates room transformed from a car park at fernwood gym in Carlton. We got to play a little part installing some dimmable LED panels on suspension kits. Looks a treat. ⭐️"
       },
       {
         "src": "assets/images/led_outside.jpg",
@@ -68,7 +68,7 @@
 
   "contact": {
     "phone": "0434 399 519",
-    "email": "info@example.com",
+    "email": "stb.electrical@outlook.com",
     "emergencyHours": "24/7 emergency call-out available",
     "serviceAreas": ["Melbourne Metro", "Wallan", "Craigieburn", "Kalkallo", "Sunbury", "Broadmeadows", "Whittlesea", "Heathcote", "Bendigo"]
   }
