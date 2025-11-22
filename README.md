@@ -1,5 +1,7 @@
 # STB Electrical Services Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf2c1989-c918-4575-8e25-156cdd9a4403/deploy-status)](https://app.netlify.com/projects/stbelectrical/deploys)
+
 A simple, static, easily editable website for STB Electrical Services (Victoria, Australia). Content is driven by a single JSON file so you can update business details without touching HTML.
 
 ## Structure
