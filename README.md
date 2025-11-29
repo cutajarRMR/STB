@@ -2,29 +2,63 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bf2c1989-c918-4575-8e25-156cdd9a4403/deploy-status)](https://app.netlify.com/projects/stbelectrical/deploys)
 
-A simple, static, easily editable website for STB Electrical Services (Victoria, Australia). Content is driven by a single JSON file so you can update business details without touching HTML.
+Professional website for STB Electrical Services, a licensed electrical contractor serving Wallan and Victoria, Australia.
 
-## Structure
+**Live Site:** [https://stbelectrical.netlify.app](https://stbelectrical.netlify.app)
+
+## About This Site
+
+This is a modern, responsive website showcasing STB Electrical's services, gallery of completed work, and contact information. The site is designed to be fast, mobile-friendly, and optimized for search engines.
+
+### Key Features
+
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Dynamic Content** - All content loaded from `data.json` for easy updates
+- **Image Gallery** - Filterable gallery showcasing completed electrical work with lightbox viewer
+- **Contact Form** - Integrated form with spam protection (honeypot + rate limiting)
+- **SEO Optimized** - Meta tags, structured data (LocalBusiness schema), sitemap, and robots.txt
+- **PWA Ready** - Includes web manifest and icons for mobile installation
+- **Fast Loading** - Optimized CSS, deferred JavaScript, and preloaded resources
+
+### Technology Stack
+
+- Pure HTML5, CSS3, and vanilla JavaScript (no frameworks)
+- Node.js/Express backend for contact form email handling
+- Deployed and hosted on [Netlify](https://www.netlify.com)
+- Continuous deployment from GitHub repository
+
+## Deployment
+
+The site is automatically deployed to Netlify whenever changes are pushed to the `main` branch. Netlify handles:
+- Automatic HTTPS/SSL certificates
+- Global CDN distribution
+- Continuous deployment from Git
+- Form handling and serverless functions
+
+Any commit to this repository triggers a new build and deployment within 1-2 minutes.
+
+## Site Structure
+
 ```
-index.html              Main page
-assets/css/styles.css   Styles
-assets/js/script.js     Logic to load JSON & populate sections
-assets/images/          Put your image files here
-data.json               Editable content file
+index.html              Main HTML page
+assets/
+  css/styles.css        Stylesheet
+  js/script.js          JavaScript for dynamic content
+  images/               Gallery images and icons
+data.json               Content configuration (services, gallery, contact info)
+server.js               Node.js backend for contact form
+sitemap.xml             SEO sitemap for search engines
+robots.txt              Search engine crawling instructions
+site.webmanifest        PWA manifest
 ```
 
 ## Editing Content (`data.json`)
-Open `data.json` and change placeholder values:
-- `business.name`, `telephone`, `url` – Public business identity
-- `business.address` – Street/locality/postal code for schema & display
-- `business.geo` – Lat/lng (optional) for Google/SEO rich results
-- `business.openingHours` – Adjust days/hours or add weekend/emergency
-- `about.paragraphs` – Free‑form description paragraphs
-- `about.points` – Bullet list for quick selling points
-- `about.licenses` – License numbers, accreditations, insurance notes
-- `services[]` – Each service has `title` + optional `description`
-- `gallery.items[]` – Update `src` (relative path), `caption`, `category`
-- `contact.phone`, `email`, `address.full`, `emergencyHours`, `serviceAreas[]`
+All content is managed through `data.json`. To update:
+- `business` section – Business identity, contact details, address, and opening hours
+- `about` section – Business description, key points, and license information
+- `services[]` – List of services with titles and descriptions
+- `gallery.items[]` – Gallery images with captions and categories
+- `contact` section – Contact details and service areas
 
 ### Adding Images
 Place image files (JPG/PNG/WebP) inside `assets/images/` and reference them in `data.json` like:
@@ -123,17 +157,17 @@ If you see `Failed to send email.` check:
 - Log submissions to a database (SQLite / Postgres) for audit.
 - Add HTML sanitization library if allowing rich text.
 
-## Deployment Suggestions
-- GitHub Pages (copy repo, push, configure) – fast & free
-- Netlify / Vercel – drag & drop folder or connect repo
-- Traditional hosting (upload contents via FTP)
+## Deployment Status
 
-## SEO & Performance Tips
-- Fill real telephone, address, license numbers
-- Favicon & PWA icons already included (see section below) – replace with branded versions for best results
-- Provide an `og-image.jpg` (1200x630) for social sharing
-- Compress images & consider WebP for gallery
-- Add alt text in `data.json` items using `alt` property if needed
+The site is live at **https://stbelectrical.netlify.app** and automatically deploys from this GitHub repository via Netlify's continuous deployment.
+
+## SEO & Performance
+- ✅ All business information, contact details, and licenses filled in
+- ✅ Favicon & PWA icons (all sizes) installed
+- ✅ Social sharing image (`og-image.jpg`) configured
+- ✅ Structured data includes Facebook and Instagram profiles
+- Consider WebP format for future gallery images for better compression
+- Add alt text in `data.json` items using `alt` property for improved accessibility
 
 Example:
 ```json
@@ -162,53 +196,49 @@ If `categories` exists it is used for filter buttons; otherwise `category` is us
 - ARIA: Uses `role="dialog"` + `aria-modal="true"` with a dynamic `aria-label` based on each image caption.
 
 ## Favicon & PWA Icons
-The `<head>` includes a full multi-platform favicon setup:
+✅ **Complete** - All favicon and PWA icons are installed and configured:
 
 Included files:
-- `assets/images/favicon-16.png`
-- `assets/images/favicon-32.png`
-- `assets/images/apple-touch-icon.png`
-- `assets/images/safari-pinned-tab.svg`
-- `site.webmanifest` (declares 192px & 512px icons for installs – add the PNGs referenced inside to complete)
+- `assets/images/favicon-16.png` - Browser tab icon (16x16)
+- `assets/images/favicon-32.png` - Browser tab icon (32x32)
+- `assets/images/favicon-192.png` - PWA home screen icon (192x192)
+- `assets/images/favicon-512.png` - PWA splash screen icon (512x512)
+- `assets/images/apple-touch-icon.png` - iOS home screen icon
+- `assets/images/safari-pinned-tab.svg` - Safari pinned tab icon
+- `site.webmanifest` - PWA configuration file
 
-To replace with your own logo versions:
-1. Generate square PNGs (transparent where possible): 16x16, 32x32, 192x192, 512x512.
-2. Overwrite existing files (add `favicon-192.png` & `favicon-512.png` under `assets/images/`).
-3. Replace the Apple touch icon (at least 180x180; current file will scale).
-4. Provide a monochrome SVG for Safari pinned tabs (single solid color) – Safari applies mask color defined in the HTML.
-5. Hard refresh browser (Ctrl+Shift+R) or clear cache.
-
-Manifest snippet (already present):
-```json
-{
-	"name": "STB Electrical Services",
-	"short_name": "STB Electrical",
-	"start_url": "/index.html",
-	"display": "standalone",
-	"background_color": "#111111",
-	"theme_color": "#111111",
-	"icons": [
-		{ "src": "assets/images/favicon-192.png", "sizes": "192x192", "type": "image/png" },
-		{ "src": "assets/images/favicon-512.png", "sizes": "512x512", "type": "image/png" }
-	]
-}
-```
-
-You can change `theme_color` to match a brand background (also reflect it in `<meta name="theme-color">`).
+The site is fully configured as a Progressive Web App. Users can add it to their mobile home screen for quick access.
 
 
 ## Safety & Compliance Notes (Optional)
 You may add a paragraph focused on Victorian regulations (e.g. AS/NZS 3000 standards, RCD requirements). This helps trust & SEO.
 
-## Version Control
-If using Git, commit changes after editing `data.json` or adding images:
-```powershell
-git add data.json assets/images/*
-git commit -m "Update content"
-```
+## Making Updates
 
-## Support
-If you need to add features (testimonials, FAQ, quote form), just ask!
+To update the live site:
+
+1. Edit `data.json` for content changes (services, gallery, contact info)
+2. Add new images to `assets/images/` if needed
+3. Commit and push changes to GitHub:
+   ```powershell
+   git add .
+   git commit -m "Update content"
+   git push
+   ```
+4. Netlify will automatically deploy within 1-2 minutes
+
+## Search Engine Optimization
+
+The site is registered with:
+- ✅ Google Search Console - Sitemap submitted
+- ✅ Bing Webmaster Tools - Sitemap submitted
+
+Structured data includes LocalBusiness schema with:
+- Business name and contact information
+- GPS coordinates for Wallan, VIC
+- Service area and opening hours
+- Social media links
 
 ---
-Made for STB Electrical Services.
+
+**STB Electrical Services** - Licensed electricians serving Victoria, Australia
