@@ -16,9 +16,9 @@
   },
   "about": {
     "paragraphs": [
-      "STB Electrical Services is a locally owned and operated business providing reliable, safe and professional electrical solutions across Victoria.",
-      "We pride ourselves on transparent pricing, quality workmanship and friendly customer service from the first call to project completion.",
-      "No job is too small—from a simple power point replacement to complex commercial fit‑outs and emergency fault finding."
+      "STB Electrical Services is your local Wallan electrician — a family-owned business built on honest pricing, safe workmanship and a genuine personal touch.",
+      "From a single power point replacement to full commercial fit-outs and emergency fault finding, no job is too small. We proudly service Wallan, surrounding areas and broader Melbourne and Victoria.",
+      "From your first call through to project completion, expect clear communication and quality results — backed by our A Grade licence and full insurance."
     ],
     "points": [
       "Domestic, commercial & light industrial",
@@ -71,6 +71,6 @@
     "phone": "0434 399 519",
     "email": "stb.electrical@outlook.com",
     "emergencyHours": "24/7 emergency call-out available",
-    "serviceAreas": ["Melbourne Metro", "Wallan", "Craigieburn", "Kalkallo", "Sunbury", "Broadmeadows", "Whittlesea", "Heathcote", "Bendigo"]
+    "serviceAreas": ["Wallan", "Melbourne Metro", "Craigieburn", "Kalkallo", "Sunbury", "Broadmeadows", "Whittlesea", "Heathcote", "Bendigo"]
   }
 }
